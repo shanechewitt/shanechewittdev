@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar';
 import './globals.css';
 import { Source_Code_Pro } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const sourceCodePro = Source_Code_Pro({
 	subsets: ['latin'],
@@ -20,6 +21,7 @@ export default function RootLayout({
 			<body className={sourceCodePro.variable}>
 				<Navbar />
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	);
